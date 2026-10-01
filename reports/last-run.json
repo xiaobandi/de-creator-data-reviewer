@@ -1,0 +1,36 @@
+{
+  "repo": "de-creator-data-reviewer",
+  "kind": "employee",
+  "run_at": "2026-09-30T23:54:11+08:00",
+  "cases": 185,
+  "passed": 185,
+  "failed": 0,
+  "by_suite": {
+    "structure": {
+      "total": 52,
+      "failed": 0
+    },
+    "contract": {
+      "total": 25,
+      "failed": 0
+    },
+    "scenario": {
+      "total": 85,
+      "failed": 0
+    },
+    "script": {
+      "total": 5,
+      "failed": 0
+    },
+    "doc": {
+      "total": 3,
+      "failed": 0
+    },
+    "compliance": {
+      "total": 15,
+      "failed": 0
+    }
+  },
+  "skipped": [],
+  "failures": []
+}

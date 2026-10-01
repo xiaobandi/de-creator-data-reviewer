@@ -1,0 +1,95 @@
+apiVersion: digital-employee/v1
+kind: DigitalEmployee
+metadata:
+  id: de_creator_data_reviewer
+  name: 跨平台数据复盘师
+  alias: null
+  repo: de-creator-data-reviewer
+  card_no: 5.4-6
+  group: creator
+  group_label: 自媒体从业者
+  phase: P1 二期
+  complexity: M-L（取决于数据连接器路径，CSV 降级方案可压回 M），总估 8-14 人日
+  score: 19
+  price: ¥50-100/月（据 R2 调研，V3 报告四星）
+  channels:
+  - GitHub（必备基础渠道）
+  - 千问办公
+  - 腾讯WorkBuddy Skill市场
+  - Dify Marketplace
+  - 小红书
+  license: Proprietary
+  version: 1.0.0
+spec:
+  positioning: 把割裂的各平台后台归一成一张看得懂、能指导下周选题的复盘报告
+  users: 中腰部以上创作者（多平台运营、有复盘意识但无方法的人群）
+  boundary: 做：跨平台数据归一、爆款/扑街归因、下周策略建议、月度报告；不做：承诺流量增长、代操作账号后台（只读不读写）
+  kpi: 复盘环节执行率从"多数人跳过"（据 R2 调研）提升至 ≥80%；复盘→选题回写率 100%（每条策略建议必须落进选题库）
+  roi_summary: 直接月省约 12h 折 ¥360-480；闭环收口的选题质量提升为主要价值
+  demand_refs:
+  - D19
+  - D11
+  - D02
+  demand_support: 充分
+  demand_evidence: 中
+runtime:
+  system_prompt: persona/system-prompt.md
+  boundary: persona/boundary.md
+  kpi: persona/kpi.md
+deliverables:
+  skills:
+  - slug: dashboard-interpretation
+    name: 数据看板解读
+    kind: private
+    path: skills/dashboard-interpretation
+    version: 1.0.0
+    maturity: contract-complete
+  - slug: strategy-recommendation
+    name: 策略建议生成
+    kind: private
+    path: skills/strategy-recommendation
+    version: 1.0.0
+    maturity: contract-complete
+  workflows:
+  - slug: wf-creator-review-data-merge
+    name: 周度数据汇总
+    path: workflows/wf-creator-review-data-merge
+    version: 1.0.0
+    phase: P1
+    calls:
+    - dashboard-interpretation
+  - slug: wf-creator-review-attribution
+    name: 爆款/扑街归因
+    path: workflows/wf-creator-review-attribution
+    version: 1.0.0
+    phase: P1
+    calls:
+    - attribution-analysis
+    - viral-structure-analysis
+  - slug: wf-creator-review-strategy
+    name: 下周内容策略建议
+    path: workflows/wf-creator-review-strategy
+    version: 1.0.0
+    phase: P1
+    calls:
+    - strategy-recommendation
+    - topic-kb-manage
+  - slug: wf-creator-review-monthly-report
+    name: 月度成长报告
+    path: workflows/wf-creator-review-monthly-report
+    version: 1.0.0
+    phase: P2
+    calls:
+    - copy-layout
+  knowledge_base: kb/
+  connectors: connectors/bindings.yaml
+external_dependencies:
+- repo: agent-skills-core
+  version: 1.0.0
+  skills:
+  - attribution-analysis
+  - copy-layout
+  - topic-kb-manage
+  - viral-structure-analysis
+  resolution: external
+spec_only_dependencies: []
