@@ -1,0 +1,15 @@
+{
+  "name": "wf-creator-review-data-merge",
+  "title": "周度数据汇总",
+  "kind": "workflow",
+  "owner": "de-creator-data-reviewer",
+  "complexity": "M",
+  "phase": "P1",
+  "one_liner": "各平台后台数据导入→播放/完播/涨粉/转化归一→周报表",
+  "pages": [
+    "docs/使用手册.html",
+    "docs/使用示例.html",
+    "docs/用户场景.html",
+    "docs/架构与流程图.html"
+  ]
+}

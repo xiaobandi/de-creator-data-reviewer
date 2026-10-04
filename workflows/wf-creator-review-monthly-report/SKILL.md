@@ -4,12 +4,19 @@ description: >-
   跨平台数据复盘师 的「月度成长报告」工作流：月度数据→成长档案报告（可对外分享）。触发方式：定时（每月 1 日）。
   当用户要完成「月度成长报告」这件事、或触发了上述条件时使用。
 license: Proprietary
+compatibility: >-
+  需要能读取工作区文件；若环境支持执行代码，将额外启用 scripts/ 下的确定性脚本路径。
+  跨 WorkBuddy / ChatGPT / DeepSeek Harness / Kimi Work / 豆包工作。
 metadata:
   author: PLATFORM
   version: "1.0.0"
   standard: agent-skills/v1
+  library: agent-skills-library
   layer: L2-workflow
   owner: de_creator_data_reviewer
+  repo: de-creator-data-reviewer
+  visibility: private_to_employee
+  delivery: employee
   complexity: S
   phase: P2
   source: new

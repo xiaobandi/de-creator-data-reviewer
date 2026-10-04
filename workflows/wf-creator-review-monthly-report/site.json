@@ -1,0 +1,15 @@
+{
+  "name": "wf-creator-review-monthly-report",
+  "title": "月度成长报告",
+  "kind": "workflow",
+  "owner": "de-creator-data-reviewer",
+  "complexity": "S",
+  "phase": "P2",
+  "one_liner": "月度数据→成长档案报告（可对外分享）",
+  "pages": [
+    "docs/使用手册.html",
+    "docs/使用示例.html",
+    "docs/用户场景.html",
+    "docs/架构与流程图.html"
+  ]
+}
