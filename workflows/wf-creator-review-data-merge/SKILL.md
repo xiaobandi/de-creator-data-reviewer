@@ -3,7 +3,7 @@ name: wf-creator-review-data-merge
 description: >-
   跨平台数据复盘师 的「周度数据汇总」工作流：各平台后台数据导入→播放/完播/涨粉/转化归一→周报表。触发方式：定时（每周日）。
   当用户要完成「周度数据汇总」这件事、或触发了上述条件时使用。
-license: Proprietary
+license: Apache-2.0
 compatibility: >-
   需要能读取工作区文件；若环境支持执行代码，将额外启用 scripts/ 下的确定性脚本路径。
   跨 WorkBuddy / ChatGPT / DeepSeek Harness / Kimi Work / 豆包工作。

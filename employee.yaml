@@ -18,7 +18,7 @@ metadata:
   - 腾讯WorkBuddy Skill市场
   - Dify Marketplace
   - 小红书
-  license: Proprietary
+  license: Apache-2.0
   version: 1.0.0
 spec:
   positioning: 把割裂的各平台后台归一成一张看得懂、能指导下周选题的复盘报告
